@@ -9,3 +9,5 @@ spring:
     encoding: utf-8
     content-type: text/html
     mode: HTML5
+chatAI:
+  API_KEY: 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
