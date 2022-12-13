@@ -19,9 +19,9 @@ public class ChatServiceImpl implements ChatAIService {
     @Value("${chatAI.API_KEY}")
     private String API_KEY;
     private String URL = "https://api.openai.com/v1/completions";
-
+    private String md5Code = "e2f5e798186344470f784f353a80ef7f";
     @Override
-    public Answer getAnswer(ChatParam question) {
+    public String getAnswer(ChatParam question,String check) {
         JSONObject jsonObject = JSONUtil.parseObj(question);
         String result = HttpRequest.post(URL)
                 .header("Authorization", "Bearer " + API_KEY)
@@ -30,6 +30,11 @@ public class ChatServiceImpl implements ChatAIService {
                 .execute().body();
         log.info("result:{}", result);
         Answer answer = JSONUtil.toBean(result, Answer.class);
-        return answer;
+        String text = answer.getChoices().get(0).getText();
+        //如果text不为空，将其中的\n替换成<br/>
+        if(text!=null){
+            text = text.replace("\n","<br/>");
+        }
+        return text;
     }
 }
