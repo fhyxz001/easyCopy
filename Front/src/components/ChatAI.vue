@@ -17,8 +17,30 @@
         </el-col>
       </el-row>
     </div>
-<!--    在右上角增加一个配置的按钮-->
-    <el-button class="chat-config" type="primary" icon="el-icon-setting" circle @click="config"></el-button>
+<!--    在右上角增加一个配置chatParam的区域，里面是对应的输入框       chatParam: {
+        model: "text-davinci-003",
+        prompt: "",
+        temperature: 0,
+        max_tokens: 1000
+      },-->
+
+    <div class="chat-param">
+      <el-form :model="chatParam" label-width="80px">
+        <el-form-item label="模型">
+          <el-input v-model="chatParam.model"></el-input>
+        </el-form-item>
+        <el-form-item label="提示">
+          <el-input v-model="chatParam.prompt"></el-input>
+        </el-form-item>
+        <el-form-item label="温度">
+          <el-input v-model="chatParam.temperature"></el-input>
+        </el-form-item>
+        <el-form-item label="最大token">
+          <el-input v-model="chatParam.max_tokens"></el-input>
+        </el-form-item>
+      </el-form>
+
+  </div>
   </div>
 </template>
 <script>
@@ -33,7 +55,7 @@ export default {
         model: "text-davinci-003",
         prompt: "",
         temperature: 0,
-        max_tokens: 1000
+        max_tokens: 5000
       },
       key:""
     };
@@ -86,7 +108,7 @@ export default {
 /*  这个输入框始终位于整个屏幕的最下方，并且其中的button始终位于最右侧，且宽高和input大小一致*/
   position: fixed;
   bottom: 0;
-  width: 100%;
+  width: 70%;
   height: 10%;
   display: flex;
   flex-direction: row;
@@ -109,6 +131,15 @@ export default {
   position: fixed;
   top: 0;
   right: 0;
+}
+.chat-param{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  background-color: #f5f5f5;
+  padding: 10px;
 }
 
 </style>
