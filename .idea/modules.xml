@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/easyCopy.iml" filepath="$PROJECT_DIR$/.idea/easyCopy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Backend/easyCopy.iml" filepath="$PROJECT_DIR$/Backend/easyCopy.iml" />
     </modules>
   </component>
 </project>

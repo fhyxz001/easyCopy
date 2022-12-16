@@ -1,45 +1,27 @@
 package moshare.easycopy.service;
 
 import cn.hutool.core.date.DateTime;
-import cn.hutool.core.date.DateUnit;
 import cn.hutool.core.date.DateUtil;
-import cn.hutool.cron.task.RunnableTask;
 import lombok.extern.slf4j.Slf4j;
 import moshare.easycopy.code.NewsSources;
 import moshare.easycopy.entity.News;
-import moshare.easycopy.entity.TitleUrl;
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.config.RequestConfig;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
-import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.util.EntityUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.io.IOException;
-import java.net.UnknownServiceException;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Objects;
 
 @Service
 @Slf4j
-public class easyCopyServiceImpl implements easyCopyService  {
+public class EasyCopyServiceImpl implements EasyCopyService {
     String date = "";
     String title = "";
     String newTitle = "";
     String content = "";
-    final String searcher_url_dot_html ="https://www.moeshare.cc/thread-htm-fid-17";
 
     @Override
     public News getNewsByUrl(String url, String siteType, String comments) {
