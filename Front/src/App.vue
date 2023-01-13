@@ -1,14 +1,17 @@
 <template>
-    <easy-copy msg="Welcome to Your Vue.js App"/>
+  <Index></Index>
 </template>
 
 <script>
-import EasyCopy from './components/easyCopy.vue'
-
+import EasyCopy from './components/EasyCopy.vue'
+import Index from './components/Index.vue'
+import ChatAI from './components/ChatAI.vue'
 export default {
   name: 'App',
   components: {
-    EasyCopy
+    Index,
+    EasyCopy,
+    ChatAI
   }
 }
 </script>

@@ -1,5 +1,4 @@
 import axios from '@/libs/api.request'
-import easyCopy  from "@/components/easyCopy";
 
 const basePath = '/api'
 
