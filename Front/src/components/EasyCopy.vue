@@ -7,11 +7,7 @@
     </div>
     <p class="tip">
       目前支持网站：
-      <a target="_blank" href="https://news.dmzj.com/donghuaqingbao">动漫之家(动画)</a>、
-      <a target="_blank" href="https://news.dmzj.com/manhuaqingbao">动漫之家(漫画)</a>、
-      <a target="_blank" href="https://news.dmzj.com/qingxiaoshuoqingbao">动漫之家(轻小说)</a>、
-      <a target="_blank" href="https://news.dmzj.com/youxizixun">动漫之家(游戏)</a>、
-      <a target="_blank" href="https://news.dmzj.com/dazahui">动漫之家(杂谈)</a>、
+      <a target="_blank" href="https://news.dmzj.com/donghuaqingbao">动漫之家</a>、
       <a target="_blank" href="https://www.3dmgame.com/news/">3DM新闻</a>、
       <a target="_blank" href="https://www.gao7.com/">搞趣网</a>、
       <a target="_blank" href="http://www.hotacg.com/">热点ACG</a>、

@@ -5,9 +5,9 @@
       <el-tab-pane label="便捷复制" name="first">
         <easy-copy></easy-copy>
       </el-tab-pane>
-      <el-tab-pane label="OpenChatAI" name="second">
-        <chat-a-i></chat-a-i>
-      </el-tab-pane>
+<!--      <el-tab-pane label="OpenChatAI" name="second">-->
+<!--        <chat-a-i></chat-a-i>-->
+<!--      </el-tab-pane>-->
     </el-tabs>
   </div>
 </template>
