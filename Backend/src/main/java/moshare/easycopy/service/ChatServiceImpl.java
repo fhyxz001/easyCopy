@@ -20,6 +20,8 @@ public class ChatServiceImpl implements ChatAIService {
     private String API_KEY;
     private String URL = "https://api.openai.com/v1/completions";
     private String md5Code = "e2f5e798186344470f784f353a80ef7f";
+
+
     @Override
     public String getAnswer(ChatParam question,String check) {
         JSONObject jsonObject = JSONUtil.parseObj(question);
