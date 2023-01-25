@@ -2,6 +2,7 @@ package moshare.easycopy.service;
 
 import cn.hutool.core.date.DateTime;
 import cn.hutool.core.date.DateUtil;
+import com.fasterxml.jackson.databind.introspect.TypeResolutionContext;
 import lombok.extern.slf4j.Slf4j;
 import moshare.easycopy.code.NewsSources;
 import moshare.easycopy.entity.News;
@@ -158,6 +159,18 @@ public class EasyCopyServiceImpl implements EasyCopyService {
         content = content.replaceAll("<img.*?src=\"(.*?)\".*?>", "[img]$1[/img]");
         //删除其中所有除了[img]和[/img]的标签
         content = content.replaceAll("<.*?>", "");
+
+        //判断newsSources的name是不是ali213
+        if(newsSources !=null){
+            if(newsSources.getName()!=null){
+                if(newsSources.getName().equals("ali213")){
+                    //如果是ali213，则需要进行额外处理，如果出现了 var ，那么截取var以及var之前的所有内容作为content
+                    if(content.contains("var")){
+                        content = content.substring(content.indexOf("var"));
+                    }
+                }
+            }
+        }
         news.setTitle(newTitle);
         news.setContent(content);
     }
