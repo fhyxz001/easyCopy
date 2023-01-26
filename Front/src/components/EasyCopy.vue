@@ -13,6 +13,8 @@
       <a target="_blank" href="http://www.hotacg.com/">热点ACG</a>、
       <a target="_blank" href="https://www.vgtime.com/topic/index.jhtml">游戏时光</a>、
       <a target="_blank" href="https://www.ali213.net/news/new/">游侠资讯</a>
+      <a target="_blank" href="http://news.sohu.com/">搜狐网</a>
+      <a target="_blank" href="https://www.gamersky.com/">游民星空</a>
     </p>
     <div class="easyCopy-input">
       <el-input type="text"  v-model="url" placeholder="请输入url"/>
