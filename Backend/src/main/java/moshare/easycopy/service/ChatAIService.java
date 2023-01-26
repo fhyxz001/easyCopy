@@ -4,5 +4,5 @@ import moshare.easycopy.entity.Answer;
 import moshare.easycopy.entity.ChatParam;
 
 public interface ChatAIService {
-    Answer getAnswer(ChatParam question);
+    String getAnswer(ChatParam question,String check);
 }

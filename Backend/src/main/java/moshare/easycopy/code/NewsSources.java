@@ -52,6 +52,26 @@ public enum NewsSources {
             "news_content_con",
             null,
             8),
+    SOHU(
+            "5",
+            "sohu",
+            "搜狐",
+            "0",
+            "article-title",
+            "time-source",
+            "article",
+            null,
+            10),
+    YOUMIN(
+            "6",
+            "gamersky",
+            "游民星空",
+            "0",
+            "Mid2L_tit",
+            "detail",
+            "Mid2L_con",
+            null,
+            10),
     GAO7("99",
             "gao7",
             "搞趣网",
@@ -61,6 +81,7 @@ public enum NewsSources {
             "area-gao7-article",
             null,
             4);
+
     //编号序号
     private String code;
     //网站名称
