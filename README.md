@@ -1,6 +1,7 @@
 # easyCopy
 
 easyCopy是一个基于SpringBoot+Vue开发的论坛便捷转载新闻工具。
+![](https://www.helloimg.com/images/2023/05/18/oEdbeh.png)
 
 ## 特点
 
